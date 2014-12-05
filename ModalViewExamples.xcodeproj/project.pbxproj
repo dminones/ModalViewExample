@@ -14,6 +14,11 @@
 		A32A65721A31049F00389793 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32A65711A31049F00389793 /* Images.xcassets */; };
 		A32A65751A31049F00389793 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32A65731A31049F00389793 /* LaunchScreen.xib */; };
 		A32A65811A31049F00389793 /* ModalViewExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A65801A31049F00389793 /* ModalViewExamplesTests.m */; };
+		A32A658C1A3104DC00389793 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A658B1A3104DC00389793 /* ModalViewController.m */; };
+		A32A658F1A31112D00389793 /* UIViewController+DismissOnTapOutside.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A658E1A31112D00389793 /* UIViewController+DismissOnTapOutside.m */; };
+		A32A65951A31176E00389793 /* IDTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A65921A31176E00389793 /* IDTransitionController.m */; };
+		A32A65961A31176E00389793 /* IDTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A65941A31176E00389793 /* IDTransitioningDelegate.m */; };
+		A32A659C1A31624D00389793 /* ModalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A659B1A31624D00389793 /* ModalNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		A32A657A1A31049F00389793 /* ModalViewExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalViewExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A657F1A31049F00389793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A32A65801A31049F00389793 /* ModalViewExamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewExamplesTests.m; sourceTree = "<group>"; };
+		A32A658A1A3104DC00389793 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		A32A658B1A3104DC00389793 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		A32A658D1A31112D00389793 /* UIViewController+DismissOnTapOutside.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissOnTapOutside.h"; sourceTree = "<group>"; };
+		A32A658E1A31112D00389793 /* UIViewController+DismissOnTapOutside.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissOnTapOutside.m"; sourceTree = "<group>"; };
+		A32A65911A31176E00389793 /* IDTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTransitionController.h; sourceTree = "<group>"; };
+		A32A65921A31176E00389793 /* IDTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTransitionController.m; sourceTree = "<group>"; };
+		A32A65931A31176E00389793 /* IDTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTransitioningDelegate.h; sourceTree = "<group>"; };
+		A32A65941A31176E00389793 /* IDTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTransitioningDelegate.m; sourceTree = "<group>"; };
+		A32A659A1A31624D00389793 /* ModalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalNavigationController.h; sourceTree = "<group>"; };
+		A32A659B1A31624D00389793 /* ModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,7 @@
 		A32A65631A31049F00389793 /* ModalViewExamples */ = {
 			isa = PBXGroup;
 			children = (
+				A32A65901A31176E00389793 /* Transitioning */,
 				A32A65681A31049F00389793 /* AppDelegate.h */,
 				A32A65691A31049F00389793 /* AppDelegate.m */,
 				A32A656B1A31049F00389793 /* ViewController.h */,
@@ -89,6 +105,12 @@
 				A32A65711A31049F00389793 /* Images.xcassets */,
 				A32A65731A31049F00389793 /* LaunchScreen.xib */,
 				A32A65641A31049F00389793 /* Supporting Files */,
+				A32A658A1A3104DC00389793 /* ModalViewController.h */,
+				A32A658B1A3104DC00389793 /* ModalViewController.m */,
+				A32A658D1A31112D00389793 /* UIViewController+DismissOnTapOutside.h */,
+				A32A658E1A31112D00389793 /* UIViewController+DismissOnTapOutside.m */,
+				A32A659A1A31624D00389793 /* ModalNavigationController.h */,
+				A32A659B1A31624D00389793 /* ModalNavigationController.m */,
 			);
 			path = ModalViewExamples;
 			sourceTree = "<group>";
@@ -117,6 +139,17 @@
 				A32A657F1A31049F00389793 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A32A65901A31176E00389793 /* Transitioning */ = {
+			isa = PBXGroup;
+			children = (
+				A32A65911A31176E00389793 /* IDTransitionController.h */,
+				A32A65921A31176E00389793 /* IDTransitionController.m */,
+				A32A65931A31176E00389793 /* IDTransitioningDelegate.h */,
+				A32A65941A31176E00389793 /* IDTransitioningDelegate.m */,
+			);
+			path = Transitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32A65961A31176E00389793 /* IDTransitioningDelegate.m in Sources */,
+				A32A658F1A31112D00389793 /* UIViewController+DismissOnTapOutside.m in Sources */,
+				A32A658C1A3104DC00389793 /* ModalViewController.m in Sources */,
 				A32A656D1A31049F00389793 /* ViewController.m in Sources */,
 				A32A656A1A31049F00389793 /* AppDelegate.m in Sources */,
 				A32A65671A31049F00389793 /* main.m in Sources */,
+				A32A65951A31176E00389793 /* IDTransitionController.m in Sources */,
+				A32A659C1A31624D00389793 /* ModalNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
