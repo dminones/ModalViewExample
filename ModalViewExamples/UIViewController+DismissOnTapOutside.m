@@ -76,7 +76,6 @@ static char gestureRecognizerDelegateKey;
     {
         UIView *view = self.view;
         CGPoint location = [gesture locationInView:view];
-        NSLog(@"Frame: %f,%f,%f,%f",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height);
         if (![view pointInside:location withEvent:nil])
         {
             [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];

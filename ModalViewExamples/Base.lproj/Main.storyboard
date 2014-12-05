@@ -13,45 +13,77 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk6-dY-GDk">
-                                <rect key="frame" x="258" y="285" width="85" height="30"/>
-                                <state key="normal" title="Open Modal">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk6-dY-GDk">
+                                <rect key="frame" x="300" y="432" width="168" height="30"/>
+                                <state key="normal" title="Open Modal With Segue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="openModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxU-8e-Wgf"/>
+                                    <segue destination="isW-r1-nlA" kind="presentation" id="uKB-Vz-1MA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-KU-oQ8">
+                                <rect key="frame" x="287" y="497" width="195" height="30"/>
+                                <state key="normal" title="Open Modal Programatically">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="691-8I-BHF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Qk6-dY-GDk" secondAttribute="centerY" id="Ofy-dl-lig"/>
+                            <constraint firstItem="6EM-KU-oQ8" firstAttribute="top" secondItem="Qk6-dY-GDk" secondAttribute="bottom" constant="35" id="SIl-Is-FmB"/>
+                            <constraint firstAttribute="centerX" secondItem="Qk6-dY-GDk" secondAttribute="centerX" id="fZY-wO-dBQ"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="127" y="59"/>
         </scene>
-        <!--ModalViewController-->
+        <!--Modal Navigation Controller-->
+        <scene sceneID="sfu-fN-jid">
+            <objects>
+                <navigationController modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" id="isW-r1-nlA" customClass="ModalNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TC7-oR-l7b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lYf-5t-8zU" kind="relationship" relationship="rootViewController" id="cf0-iN-flB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq1-2R-Zuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-377"/>
+        </scene>
+        <!--Modal View Controller-->
         <scene sceneID="Zty-Uv-5B5">
             <objects>
-                <viewController restorationIdentifier="ModalViewController" storyboardIdentifier="ModalViewController" title="ModalViewController" modalPresentationStyle="formSheet" id="lYf-5t-8zU" customClass="ModalViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ModalViewController" storyboardIdentifier="ModalViewController" title="Modal View Controller" id="lYf-5t-8zU" customClass="ModalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SWU-ev-Tna"/>
                         <viewControllerLayoutGuide type="bottom" id="Abf-0i-opn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TB0-YZ-mjQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qa-0g-J3U">
-                                <rect key="frame" x="273" y="289" width="54" height="21"/>
+                                <rect key="frame" x="243" y="248" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aip-p7-93b">
-                                <rect key="frame" x="283" y="370" width="35" height="30"/>
+                                <rect key="frame" x="253" y="295" width="35" height="30"/>
                                 <state key="normal" title="Push">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -62,13 +94,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZNP-nT-APB"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="label" destination="8Qa-0g-J3U" id="DiR-VS-bkn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9n7-B8-4gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="535"/>
+            <point key="canvasLocation" x="1987" y="-377"/>
         </scene>
     </scenes>
 </document>
